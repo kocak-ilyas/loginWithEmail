@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { Container, AppBar, Typography, Grow, Grid } from "@material-ui/core";
 import { useDispatch } from "react-redux";
 
@@ -19,16 +19,11 @@ const App = () => {
 
   return (
     <Container maxWidth="lg">
-      <AppBar position="static" color="inherit" className={classes.AppBar}>
-        <Typography varaint="h2" align="center" className={classes.heading}>
+      <AppBar className={classes.appBar} position="static" color="inherit">
+        <Typography className={classes.heading} variant="h2" align="center">
           Memories
         </Typography>
-        <img
-          src={memories}
-          alt="memories"
-          height="60"
-          className={classes.image}
-        />
+        <img className={classes.image} src={memories} alt="icon" height="60" />
       </AppBar>
       <Grow in>
         <Container>
@@ -39,10 +34,14 @@ const App = () => {
             spacing={3}
           >
             <Grid item xs={12} sm={7}>
-              <Posts />
+              <Posts
+              // setCurrentId={setCurrentId}
+              />
             </Grid>
             <Grid item xs={12} sm={4}>
-              <Form />
+              <Form
+              // currentId={currentId} setCurrentId={setCurrentId}
+              />
             </Grid>
           </Grid>
         </Container>

@@ -17,6 +17,9 @@ const CONNECTION_URL =
 'mongodb+srv://cakir:cakir123@cluster0.xxl81.mongodb.net/cakirDB?retryWrites=true&w=majority';
 // `mongodb+srv://${process.env.REACT_APP_mongodb_user}:${process.env.REACT_APP_mongodb_key}@cluster0.xxl81.mongodb.net/${process.env.REACT_APP_mongodb_dataBase}?retryWrites=true&w=majority`;
 // `mongodb+srv://${process.env.user}:${process.env.key}@cluster0.xxl81.mongodb.net/${process.env.dataBase}?retryWrites=true&w=majority`;
+// `mongodb+srv://${process.env.NODE_ENV_user}:${process.env.NODE_ENV_key}@cluster0.xxl81.mongodb.net/${process.env.NODE_ENV_dataBase}?retryWrites=true&w=majority`;
+
+
 
 const PORT = process.env.PORT|| 5000;
 mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
